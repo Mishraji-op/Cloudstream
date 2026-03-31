@@ -137,6 +137,7 @@ jobs:
           owner, name = repo.split('/', 1)
           raw_base = f"https://raw.githubusercontent.com/{repo}/builds/"
           pages_base = f"https://{owner}.github.io/{name}/"
+          jsdelivr_base = f"https://cdn.jsdelivr.net/gh/{repo}@builds/"
 
           plugins_path = Path('build/plugins.json')
           plugins = json.loads(plugins_path.read_text('utf-8'))
@@ -147,11 +148,21 @@ jobs:
                 item[key] = pages_base + value[len(raw_base):]
 
           Path('build/plugins.pages.json').write_text(json.dumps(plugins, indent=4, ensure_ascii=False) + "\n", 'utf-8')
+
+          plugins = json.loads(plugins_path.read_text('utf-8'))
+          for item in plugins:
+            for key in ('url', 'jarUrl'):
+              value = item.get(key)
+              if isinstance(value, str) and value.startswith(raw_base):
+                item[key] = jsdelivr_base + value[len(raw_base):]
+
+          Path('build/plugins.jsdelivr.json').write_text(json.dumps(plugins, indent=4, ensure_ascii=False) + "\n", 'utf-8')
           PY
 
           cp **/build/*.cs3 $GITHUB_WORKSPACE/builds
           cp build/plugins.json $GITHUB_WORKSPACE/builds
           cp build/plugins.pages.json $GITHUB_WORKSPACE/builds
+          cp build/plugins.jsdelivr.json $GITHUB_WORKSPACE/builds
 
       - name: Push builds
         run: |
