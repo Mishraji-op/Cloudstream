@@ -123,8 +123,35 @@ jobs:
           cd $GITHUB_WORKSPACE/src
           chmod +x gradlew
           ./gradlew make makePluginsJson
+
+          # Create an alternate plugins index that points plugin downloads to GitHub Pages.
+          # Useful when raw.githubusercontent.com is blocked or when content-type/caching issues occur.
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          repo = os.environ.get('GITHUB_REPOSITORY', '')
+          if not repo or '/' not in repo:
+            raise SystemExit('GITHUB_REPOSITORY is missing')
+
+          owner, name = repo.split('/', 1)
+          raw_base = f"https://raw.githubusercontent.com/{repo}/builds/"
+          pages_base = f"https://{owner}.github.io/{name}/"
+
+          plugins_path = Path('build/plugins.json')
+          plugins = json.loads(plugins_path.read_text('utf-8'))
+          for item in plugins:
+            for key in ('url', 'jarUrl'):
+              value = item.get(key)
+              if isinstance(value, str) and value.startswith(raw_base):
+                item[key] = pages_base + value[len(raw_base):]
+
+          Path('build/plugins.pages.json').write_text(json.dumps(plugins, indent=4, ensure_ascii=False) + "\n", 'utf-8')
+          PY
+
           cp **/build/*.cs3 $GITHUB_WORKSPACE/builds
           cp build/plugins.json $GITHUB_WORKSPACE/builds
+          cp build/plugins.pages.json $GITHUB_WORKSPACE/builds
 
       - name: Push builds
         run: |
