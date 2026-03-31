@@ -170,9 +170,9 @@ jobs:
 
           # Cloudstream repository wrapper (same shape used by recloudstream).
           repo_json = {
-            "name": "CNCVerse Cloudstream Repository",
-            "description": "CNCVerse extension repository",
-            "iconUrl": f"https://raw.githubusercontent.com/{repo}/builds/repo-icon.png",
+            "name": "CNC Repo(All Language)",
+            "iconUrl": f"https://raw.githubusercontent.com/{repo}/builds/cnc.png",
+            "description": "All Language Contents",
             "manifestVersion": 1,
             "pluginLists": [
               f"https://raw.githubusercontent.com/{repo}/builds/plugins.json",
@@ -198,6 +198,7 @@ jobs:
 
           # Repository icon (used by repo.json iconUrl)
           cp MovieBoxProvider/icon.png $GITHUB_WORKSPACE/builds/repo-icon.png
+          cp MovieBoxProvider/icon.png $GITHUB_WORKSPACE/builds/cnc.png
 
       - name: Push builds
         run: |
@@ -212,6 +213,10 @@ jobs:
 
           if [ -f .gitignore ] && ! grep -qx "!repo-icon.png" .gitignore; then
             printf "\n!repo-icon.png\n" >> .gitignore
+          fi
+
+          if [ -f .gitignore ] && ! grep -qx "!cnc.png" .gitignore; then
+            printf "\n!cnc.png\n" >> .gitignore
           fi
 
           git add .
