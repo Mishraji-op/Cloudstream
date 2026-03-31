@@ -28,6 +28,78 @@ class MovieBoxProvider : MainAPI() {
     private val secretKeyDefault = BuildConfig.MOVIEBOX_SECRET_KEY_DEFAULT
     private val secretKeyAlt = BuildConfig.MOVIEBOX_SECRET_KEY_ALT
 
+    private fun normalizeMovieBoxSecret(raw: String): String {
+        val s = raw.trim().trim('"', '\'', '“', '”', '‘', '’')
+        val noWhitespace = buildString(s.length) {
+            for (ch in s) if (!ch.isWhitespace()) append(ch)
+        }
+
+        return buildString(noWhitespace.length) {
+            for (ch in noWhitespace) {
+                append(
+                    when (ch) {
+                        // Common copy/paste confusables we’ve seen in MovieBox keys
+                        'Ø', 'О', 'Ο' -> 'O'
+                        'Е', 'Ε' -> 'E'
+                        'В', 'Β' -> 'B'
+                        'Х', 'Χ' -> 'X'
+                        'Т', 'Τ' -> 'T'
+                        'п' -> 'n'
+                        // Lowercase Cyrillic letters that look like Latin
+                        'а' -> 'a'
+                        'е' -> 'e'
+                        'о' -> 'o'
+                        'с' -> 'c'
+                        'х' -> 'x'
+                        'у' -> 'y'
+                        else -> ch
+                    }
+                )
+            }
+        }
+    }
+
+    private fun decodeMovieBoxSecret(rawSecret: String): ByteArray {
+        val normalized = normalizeMovieBoxSecret(rawSecret)
+        val variants = listOf(
+            normalized,
+            normalized.replace('-', '+').replace('_', '/'),
+        ).distinct()
+
+        fun paddedBase64(s: String): String {
+            val mod = s.length % 4
+            return if (mod == 0) s else s + "=".repeat(4 - mod)
+        }
+
+        for (variant in variants) {
+            try {
+                return base64DecodeArray(paddedBase64(variant))
+            } catch (_: Throwable) {
+                // try next
+            }
+            try {
+                return base64DecodeArray(variant)
+            } catch (_: Throwable) {
+                // try next
+            }
+        }
+
+        // Last-resort attempt: strip clearly invalid characters and retry.
+        val stripped = normalized.filter { ch ->
+            ch.isLetterOrDigit() || ch == '+' || ch == '/' || ch == '=' || ch == '-' || ch == '_'
+        }
+        if (stripped.isNotEmpty() && stripped != normalized) {
+            try {
+                return base64DecodeArray(paddedBase64(stripped.replace('-', '+').replace('_', '/')))
+            } catch (_: Throwable) {
+                // fall through
+            }
+        }
+
+        // Never crash the provider; fall back to bytes (may yield invalid signatures).
+        return normalized.toByteArray(Charsets.UTF_8)
+    }
+
     private val userAgent =
         "com.community.mbox.in/50020042 (Linux; U; Android 16; en_IN; sdk_gphone64_x86_64; Build/BP22.250325.006; Cronet/133.0.6876.3)"
 
@@ -102,7 +174,7 @@ class MovieBoxProvider : MainAPI() {
         val timestamp = hardcodedTimestamp ?: System.currentTimeMillis()
         val canonical = buildCanonicalString(method, accept, contentType, url, body, timestamp)
         val secret = if (useAltKey) secretKeyAlt else secretKeyDefault
-        val secretBytes = base64DecodeArray(secret)
+        val secretBytes = decodeMovieBoxSecret(secret)
 
         val mac = Mac.getInstance("HmacMD5")
         mac.init(SecretKeySpec(secretBytes, "HmacMD5"))

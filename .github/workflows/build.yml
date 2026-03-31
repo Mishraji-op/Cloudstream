@@ -170,7 +170,7 @@ jobs:
 
           # Cloudstream repository wrapper (same shape used by recloudstream).
           repo_json = {
-            "name": "CNC Repo(All Language)",
+            "name": "moviepie",
             "iconUrl": f"https://raw.githubusercontent.com/{repo}/builds/cnc.png",
             "description": "All Language Contents",
             "manifestVersion": 1,
