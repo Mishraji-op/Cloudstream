@@ -164,6 +164,20 @@ jobs:
               item['jarUrl'] = item['url']
 
           Path('build/plugins.jsdelivr.json').write_text(json.dumps(plugins, indent=4, ensure_ascii=False) + "\n", 'utf-8')
+
+          # Backwards-compatible alias (older builds allow-listed this filename).
+          Path('build/plugins.jsdelivr.cs3.json').write_text(json.dumps(plugins, indent=4, ensure_ascii=False) + "\n", 'utf-8')
+
+          # Cloudstream repository wrapper (same shape used by recloudstream).
+          repo_json = {
+            "name": "CNCVerse Cloudstream Repository",
+            "description": "CNCVerse extension repository",
+            "manifestVersion": 1,
+            "pluginLists": [
+              f"https://raw.githubusercontent.com/{repo}/builds/plugins.json",
+            ],
+          }
+          Path('build/repo.json').write_text(json.dumps(repo_json, indent=2, ensure_ascii=False) + "\n", 'utf-8')
           PY
 
           cp **/build/*.cs3 $GITHUB_WORKSPACE/builds
@@ -178,12 +192,20 @@ jobs:
           cp build/plugins.json $GITHUB_WORKSPACE/builds
           cp build/plugins.pages.json $GITHUB_WORKSPACE/builds
           cp build/plugins.jsdelivr.json $GITHUB_WORKSPACE/builds
+          cp build/plugins.jsdelivr.cs3.json $GITHUB_WORKSPACE/builds
+          cp build/repo.json $GITHUB_WORKSPACE/builds
 
       - name: Push builds
         run: |
           cd $GITHUB_WORKSPACE/builds
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
+
+          # builds branch uses an allow-list .gitignore; ensure repo.json is included.
+          if [ -f .gitignore ] && ! grep -qx "!repo.json" .gitignore; then
+            printf "\n!repo.json\n" >> .gitignore
+          fi
+
           git add .
           git commit --amend -m "Build $GITHUB_SHA" || exit 0   # do not error if nothing to commit
           git push --force
