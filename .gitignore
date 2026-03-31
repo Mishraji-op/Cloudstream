@@ -13,3 +13,6 @@ local.properties
 .vscode
 .venv
 .kotlin
+
+__pycache__/
+*.py[cod]
