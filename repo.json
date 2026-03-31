@@ -1,0 +1,9 @@
+{
+  "name": "moviepie",
+  "iconUrl": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/cnc.png",
+  "description": "All Language Contents",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/plugins.json"
+  ]
+}

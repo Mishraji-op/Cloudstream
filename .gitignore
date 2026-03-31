@@ -1,0 +1,15 @@
+*
+!.gitignore
+!*.cs3
+!*.jar
+!plugins.json
+!plugins.pages.json
+!plugins.jsdelivr.json
+!index.html
+!.nojekyll
+
+!repo.json
+
+!repo-icon.png
+
+!cnc.png

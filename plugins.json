@@ -1,0 +1,530 @@
+[
+    {
+        "iconUrl": "https://play-lh.googleusercontent.com/G9s84Cm1TDnKDX2P8nipS_s60cuCnYtjBRRLespF8nivjXmbV9tF1fY37clZhXMLaA",
+        "jarFileSize": 388702,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 82997,
+        "status": 3,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Anime",
+            "Movies",
+            "TvSeries",
+            "Documentary"
+        ],
+        "version": 4,
+        "internalName": "BilibiliProvider",
+        "jarUrl": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/BilibiliProvider.jar",
+        "description": "Bilibili TV - International streaming platform for anime, movies, and variety shows (bilibili.tv)",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/BilibiliProvider.cs3",
+        "name": "BilibiliProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/CastleTvProvider/icon.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 68820,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "CNCVerse"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 11,
+        "internalName": "CastleTvProvider",
+        "description": "Castle TV Movies and Series Provider",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/CastleTvProvider.cs3",
+        "name": "CastleTvProvider"
+    },
+    {
+        "iconUrl": "https://modapk.world/wp-content/uploads/2025/11/Et-90x90.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 39966,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "CNCVerse"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 3,
+        "internalName": "CineTvProvider",
+        "description": "Clone of Memesapp , FilmTV etc",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/CineTvProvider.cs3",
+        "name": "CineTvProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/CNC%20Verse/icon.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 63023,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 52,
+        "internalName": "CNCVerse",
+        "description": "Netflix, PrimeVideo, Disney+ Hotstar Contents in Multiple Languages",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/CNCVerse.cs3",
+        "name": "CNCVerse"
+    },
+    {
+        "iconUrl": "https://cricfy.pro/wp-content/uploads/2024/11/cropped-cricfytv-2.png",
+        "jarFileSize": 377685,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 79388,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 29,
+        "internalName": "CricifyProvider",
+        "jarUrl": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/CricifyProvider.jar",
+        "description": "Watch Live sports and TV channels",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/CricifyProvider.cs3",
+        "name": "CricifyProvider"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=desi-serials.to&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 31412,
+        "status": 1,
+        "language": "hi",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "DesiSerialsProvider",
+        "description": "Desi Serials Tv Shows Provider",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/DesiSerialsProvider.cs3",
+        "name": "DesiSerialsProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/DoFlixProvider/icon.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 66550,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 6,
+        "internalName": "DoFlixProvider",
+        "description": "DoFlix Provider for Movies and TV Series",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/DoFlixProvider.cs3",
+        "name": "DoFlixProvider"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/master/EinthusanProvider/icon.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 22090,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 6,
+        "internalName": "EinthusanProvider",
+        "description": "Indian Multi-language HD Provider",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/EinthusanProvider.cs3",
+        "name": "EinthusanProvider"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=goldenaudiobook.com/&sz=%size%",
+        "jarFileSize": 65455,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 18909,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 2,
+        "internalName": "GoldenAudiobook",
+        "jarUrl": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/GoldenAudiobook.jar",
+        "description": "Audiobooks - Use Picture in Picture or VLC as external player",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/GoldenAudiobook.cs3",
+        "name": "GoldenAudiobook"
+    },
+    {
+        "iconUrl": "https://images.dwncdn.net/images/t_app-icon-l/p/b0c9663c-0d61-4941-b12f-91c58c06189f/1137087733/hdo-box-logo",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 29036,
+        "status": 0,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movies",
+            "TvSeries"
+        ],
+        "version": 5,
+        "internalName": "HDOProvider",
+        "description": "HDO provider",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/HDOProvider.cs3",
+        "name": "HDOProvider"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=rezka.ag&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 36096,
+        "status": 1,
+        "language": "ru",
+        "authors": [
+            "Hexated, NivinCNC"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "Anime",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 5,
+        "internalName": "HDrezkaProvider",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/HDrezkaProvider.cs3",
+        "name": "HDrezkaProvider"
+    },
+    {
+        "iconUrl": "https://librivox.org/wp-content/themes/librivox/images/librivox-logo.png",
+        "jarFileSize": 62263,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 16870,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "KillerDogeEmpire, NivinCNC"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 3,
+        "internalName": "LibriVoxAudiobook",
+        "jarUrl": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/LibriVoxAudiobook.jar",
+        "description": "Audiobooks in public domain",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/LibriVoxAudiobook.cs3",
+        "name": "LibriVoxAudiobook"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/MovieBoxProvider/icon.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 64651,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 14,
+        "internalName": "MovieBoxProvider",
+        "description": "Multi Language Movies and Series Provider",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/MovieBoxProvider.cs3",
+        "name": "MovieBoxProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/MovieBoxProvider/icon.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 69917,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 7,
+        "internalName": "MovieBoxProviderIN",
+        "description": "Multi Language Movies and Series Provider (IN)",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/MovieBoxProviderIN.cs3",
+        "name": "MovieBoxProviderIN"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/master/MoviezwapProvider/icon.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 21076,
+        "status": 1,
+        "language": "te",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 2,
+        "internalName": "MoviezwapProvider",
+        "description": "Telugu Movies Provider - Moviezwap",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/MoviezwapProvider.cs3",
+        "name": "MoviezwapProvider"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/refs/heads/master/PikashowProvider/logo.png",
+        "jarFileSize": 273157,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 63643,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 3,
+        "internalName": "PikashowProvider",
+        "jarUrl": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/PikashowProvider.jar",
+        "description": "Stream movies and series from Pikashow",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/PikashowProvider.cs3",
+        "name": "PikashowProvider"
+    },
+    {
+        "iconUrl": "https://cdn.mytuner.mobi/static/ctr/icons/App_192x192/in.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 17806,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 3,
+        "internalName": "RadioIndiaProvider",
+        "description": "Radio India Provider",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/RadioIndiaProvider.cs3",
+        "name": "RadioIndiaProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/Rtally/icon.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 19512,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "Redowan, NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Anime",
+            "AnimeMovie",
+            "AsianDrama"
+        ],
+        "version": 17,
+        "internalName": "Rtally",
+        "description": "Movie and TV Series provider",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/Rtally.cs3",
+        "name": "Rtally"
+    },
+    {
+        "iconUrl": "https://appteka.store/get/a20p17EuCKFD08AaFsfH3JSJ6OU30ccp18WrKaNDze4LqOsDArhKj13-f-SjAayiWJH6P6pv9AlzhcfzEXlmRokU-I4=/726bbb91e36da425f55efce72cccb3a82df1d265.png",
+        "jarFileSize": 388585,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 77240,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 8,
+        "internalName": "SKTechProvider",
+        "jarUrl": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/SKTechProvider.jar",
+        "description": "Watch Live sports and TV channels via SK Tech",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/SKTechProvider.cs3",
+        "name": "SKTechProvider"
+    },
+    {
+        "iconUrl": "https://play-lh.googleusercontent.com/7geBQBtW_yN70BU81Oi2SoZvYsj5VoYrI4FmUNdqWQlchtExJb7XE_1BQysGzgJ6mBU",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 44562,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Anime"
+        ],
+        "version": 4,
+        "internalName": "StreamFlixProvider",
+        "description": "StreamFlix Multi Language Movies and Series Provider",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/StreamFlixProvider.cs3",
+        "name": "StreamFlixProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/SunGoProvider/icon.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 23057,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 8,
+        "internalName": "SunGoProvider",
+        "description": "Indian Live TV Provider",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/SunGoProvider.cs3",
+        "name": "SunGoProvider"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/TamilDhoolProvider/icon.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 23786,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "TvSeries"
+        ],
+        "version": 6,
+        "internalName": "TamilDhoolProvider",
+        "description": "Tamil Tv Serial/Shows Provider",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/TamilDhoolProvider.cs3",
+        "name": "TamilDhoolProvider"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=tamilian.io&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 19969,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movies"
+        ],
+        "version": 2,
+        "internalName": "Tamilian",
+        "description": "Movies (Tamil)",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/Tamilian.cs3",
+        "name": "Tamilian"
+    },
+    {
+        "iconUrl": "https://github.com/NivinCNC/CNCVerse-Cloud-Stream-Extension/raw/refs/heads/master/TamilUltraProvider/icon.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 17521,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Live"
+        ],
+        "version": 8,
+        "internalName": "TamilUltraProvider",
+        "description": "Indian Live TV Provider",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/TamilUltraProvider.cs3",
+        "name": "TamilUltraProvider"
+    },
+    {
+        "iconUrl": "https://editorialge.com/wp-content/uploads/2023/07/Watch32..jpg",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 31380,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 4,
+        "internalName": "Watch32",
+        "description": "Watch32 is a Free Movies streaming site with over 10000 movies and TV-Series.",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/Watch32.cs3",
+        "name": "Watch32"
+    },
+    {
+        "iconUrl": "https://play-lh.googleusercontent.com/zVq_wAus2snoO-ggyI6IomlsCzfybAozQOGYpBrv71r1--rOYOYWsr_N7DWwVp9t7ro=s248-rw",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/Mishraji-op/Cloudstream",
+        "fileSize": 43587,
+        "status": 1,
+        "language": "ta",
+        "authors": [
+            "NivinCNC"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Anime"
+        ],
+        "version": 4,
+        "internalName": "XonProvider",
+        "description": "Xon Provider for Anime and Cartoons - Tamil, Hindi, Telugu, English, Japanese",
+        "url": "https://raw.githubusercontent.com/Mishraji-op/Cloudstream/builds/XonProvider.cs3",
+        "name": "XonProvider"
+    }
+]
