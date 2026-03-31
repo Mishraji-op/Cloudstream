@@ -33,7 +33,9 @@ jobs:
           path: "builds"
 
       - name: Clean old builds
-        run: rm $GITHUB_WORKSPACE/builds/*.cs3 || true
+        run: |
+          rm $GITHUB_WORKSPACE/builds/*.cs3 || true
+          rm $GITHUB_WORKSPACE/builds/*.jar || true
 
       - name: Setup JDK 17
         uses: actions/setup-java@v4.6.0
@@ -160,6 +162,14 @@ jobs:
           PY
 
           cp **/build/*.cs3 $GITHUB_WORKSPACE/builds
+
+          # Cloudstream repositories may use `jarUrl` from plugins.json.
+          # The generated index points jarUrl to *.jar, so publish *.jar copies
+          # alongside the *.cs3 artifacts to avoid repo validation failures.
+          for f in $GITHUB_WORKSPACE/builds/*.cs3; do
+            cp -f "$f" "${f%.cs3}.jar"
+          done
+
           cp build/plugins.json $GITHUB_WORKSPACE/builds
           cp build/plugins.pages.json $GITHUB_WORKSPACE/builds
           cp build/plugins.jsdelivr.json $GITHUB_WORKSPACE/builds
