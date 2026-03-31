@@ -6,7 +6,13 @@ val disabled = listOf<String>()
 
 File(rootDir, ".").eachDir { dir ->
     if (!disabled.contains(dir.name) && File(dir, "build.gradle.kts").exists()) {
-        include(dir.name)
+        val sanitizedName = dir.name.replace("\\s+".toRegex(), "")
+        if (sanitizedName != dir.name) {
+            include(sanitizedName)
+            project(":$sanitizedName").projectDir = dir
+        } else {
+            include(dir.name)
+        }
     }
 }
 
