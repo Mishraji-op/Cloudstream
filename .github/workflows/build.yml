@@ -202,6 +202,18 @@ jobs:
 
       - name: Push builds
         run: |
+          set -euo pipefail
+
+          # Safety: don't allow reruns of older commits to overwrite the `builds` branch.
+          # Only publish if this workflow is running for the current HEAD of the triggering branch.
+          cd $GITHUB_WORKSPACE/src
+          git fetch origin "$GITHUB_REF_NAME" --depth=1
+          head_sha="$(git rev-parse "origin/$GITHUB_REF_NAME")"
+          if [ "$GITHUB_SHA" != "$head_sha" ]; then
+            echo "Skipping publish: GITHUB_SHA ($GITHUB_SHA) is not HEAD of $GITHUB_REF_NAME ($head_sha)."
+            exit 0
+          fi
+
           cd $GITHUB_WORKSPACE/builds
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
