@@ -172,6 +172,7 @@ jobs:
           repo_json = {
             "name": "CNCVerse Cloudstream Repository",
             "description": "CNCVerse extension repository",
+            "iconUrl": f"https://raw.githubusercontent.com/{repo}/builds/repo-icon.png",
             "manifestVersion": 1,
             "pluginLists": [
               f"https://raw.githubusercontent.com/{repo}/builds/plugins.json",
@@ -195,6 +196,9 @@ jobs:
           cp build/plugins.jsdelivr.cs3.json $GITHUB_WORKSPACE/builds
           cp build/repo.json $GITHUB_WORKSPACE/builds
 
+          # Repository icon (used by repo.json iconUrl)
+          cp MovieBoxProvider/icon.png $GITHUB_WORKSPACE/builds/repo-icon.png
+
       - name: Push builds
         run: |
           cd $GITHUB_WORKSPACE/builds
@@ -204,6 +208,10 @@ jobs:
           # builds branch uses an allow-list .gitignore; ensure repo.json is included.
           if [ -f .gitignore ] && ! grep -qx "!repo.json" .gitignore; then
             printf "\n!repo.json\n" >> .gitignore
+          fi
+
+          if [ -f .gitignore ] && ! grep -qx "!repo-icon.png" .gitignore; then
+            printf "\n!repo-icon.png\n" >> .gitignore
           fi
 
           git add .
