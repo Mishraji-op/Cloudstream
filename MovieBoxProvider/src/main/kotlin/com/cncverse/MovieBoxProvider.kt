@@ -523,9 +523,23 @@ class MovieBoxProvider : MainAPI() {
 
                 var emitted = false
 
+                fun normalizeDetectorUrl(url: String?): String? {
+                    val raw = url?.trim().orEmpty()
+                    if (raw.isBlank()) return null
+
+                    val withScheme = if (raw.startsWith("//")) {
+                        "https:$raw"
+                    } else {
+                        raw
+                    }
+
+                    // Some resourceLink values contain spaces (invalid URL unless encoded).
+                    // Cloudstream/OkHttp is strict here, so encode the most common offender.
+                    return withScheme.replace(" ", "%20")
+                }
+
                 suspend fun emitOne(url: String?, label: String?) {
-                    val u = url?.trim().orEmpty()
-                    if (u.isBlank()) return
+                    val u = normalizeDetectorUrl(url) ?: return
 
                     val type = when {
                         u.startsWith("magnet:", ignoreCase = true) -> ExtractorLinkType.MAGNET
@@ -546,10 +560,9 @@ class MovieBoxProvider : MainAPI() {
                             url = u,
                             type = type,
                         ) {
-                            this.headers = mapOf(
-                                "Referer" to mainUrl,
-                                "User-Agent" to userAgent
-                            )
+                            // Direct stream links are hosted on third-party CDNs and often work best
+                            // without forcing MovieBox app headers (some hosts block these).
+                            this.headers = emptyMap()
                             this.quality = Qualities.Unknown.value
                         }
                     )
